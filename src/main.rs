@@ -5,9 +5,9 @@ use std::io;
 fn main() {
     println!("Угадайте номер!");
     let secret_number = rand::thread_rng().gen_range(1..=100);
+    println!("Пожалуйста, введите свое предположение:");
 
     loop {
-        println!("Пожалуйста, введите свое предположение.");
         let mut guess = String::new();
         io::stdin()
             .read_line(&mut guess)
@@ -22,14 +22,12 @@ fn main() {
         };
 
         match guess.cmp(&secret_number) {
-            Ordering::Less => println!("Слишком маленькое!"),
-            Ordering::Greater => println!("Слишком большое!"),
+            Ordering::Less => println!("Слишком маленькое! Попытайтесь ещё раз:"),
+            Ordering::Greater => println!("Слишком большое! Попытайтесь ещё раз:"),
             Ordering::Equal => {
                 println!("Ты угадал(а)!");
                 break;
             }
         }
     }
-
-    // println!("Вы угадали: {guess}");
 }
