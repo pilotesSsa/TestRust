@@ -15,11 +15,13 @@ fn main() {
 
     println!("The value of x is: {x}");
 
-    // WRONG!
-    // let mut spaces = "   ";
-    // spaces = spaces.len();
+    /*
+    WRONG!
+    let mut spaces = "   ";
+    spaces = spaces.len();
+    */
 
     // CORRECT
     let spaces = "   ";
-    let spaces = spaces.len();
+    let _spaces = spaces.len();
 }
