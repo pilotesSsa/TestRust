@@ -72,12 +72,10 @@ fn example_6() {
 }
 
 fn example_7() {
-    fn main() {
-        for number in (1..4).rev() {
-            println!("{number}!");
-        }
-        println!("LIFTOFF!!!");
+    for number in (1..4).rev() {
+        println!("{number}!");
     }
+    println!("LIFTOFF!!!");
 }
 
 fn fibanachi_n(n: i32) -> i32 {
